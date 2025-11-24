@@ -1,0 +1,27 @@
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .action-btn.checkin {
+    background-color: #fef9c3;
+    color: #b45309;
+    border: 1px solid #fbbf24;
+  }
+  
+  .action-btn.pending {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+  }
+  
+  .action-btn.processing {
+    background-color: #ede9fe;
+    color: #5b21b6;
+    border: 1px solid #8b5cf6;
+  }
+  

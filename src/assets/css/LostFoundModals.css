@@ -1,0 +1,260 @@
+/* LostFoundModals.css - Optimized Version */
+.lf-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  backdrop-filter: blur(3px);
+  animation: lf-fadeIn 0.3s ease-out;
+  overflow: hidden; /* Prevent scrolling on body when modal is open */
+}
+
+.lf-modal-container {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  border: 1px solid var(--border-color);
+  animation: lf-slideUp 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.lf-modal-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+.lf-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--card-bg);
+  z-index: 10;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.lf-modal-body {
+  padding: 1.25rem;
+  overflow-y: auto;
+  flex-grow: 1; /* Take remaining space */
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lf-modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+.lf-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  position: sticky;
+  bottom: 0;
+  background-color: var(--card-bg);
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .lf-modal-container {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .lf-modal-header,
+  .lf-modal-footer {
+    padding: 1rem;
+  }
+
+  .lf-modal-body {
+    padding: 1rem;
+  }
+
+  .lf-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .lf-form-group input,
+  .lf-form-group select,
+  .lf-form-group textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .lf-modal-container {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  .lf-modal-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .lf-modal-close-btn {
+    font-size: 1.25rem;
+  }
+  
+  .lf-modal-footer {
+    flex-direction: column;
+  }
+  
+  .lf-btn {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes lf-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lf-slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Image Compression Styles */
+.lf-compression-stats {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+.lf-compression-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--success-color);
+  margin-bottom: 8px;
+}
+
+.lf-compression-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lf-compression-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lf-compression-savings {
+  color: var(--success-color);
+  font-weight: 600;
+  border-top: 1px solid var(--border-primary);
+  padding-top: 6px;
+  margin-top: 6px;
+}
+
+.lf-compression-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.lf-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-primary);
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: lf-spin 1s linear infinite;
+}
+
+@keyframes lf-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.lf-photo-actions {
+  margin-top: 8px;
+}
+
+/* Advanced Settings Styles */
+.lf-advanced-settings-toggle {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.lf-btn-link {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+}
+
+.lf-btn-link:hover {
+  color: var(--primary-hover);
+}
+
+.lf-advanced-settings {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-primary);
+}
+
+.lf-advanced-settings .lf-form-group {
+  margin-bottom: 12px;
+}
+
+.lf-advanced-settings .lf-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.lf-advanced-settings label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lf-advanced-settings .form-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}

@@ -1,0 +1,189 @@
+
+.lf-form-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.lf-form-header {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  color: white;
+  text-align: center;
+}
+
+.lf-form-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.lf-form-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.lf-form-description {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.lf-form-body {
+  padding: 1.5rem;
+}
+
+.lf-form-section {
+  color: #3a0ca3;
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 500;
+}
+
+.lf-form-group {
+  margin-bottom: 1rem;
+}
+
+.lf-form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background-color: #f8f9fa;
+}
+
+.lf-form-control:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+  background-color: white;
+}
+
+textarea.lf-form-control {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Photo Upload */
+.lf-photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.lf-photo-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px dashed #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.lf-photo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lf-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.lf-btn-primary {
+  background-color: #4361ee;
+  color: white;
+}
+
+.lf-btn-secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.lf-btn-icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.lf-form-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  background: #f8f9fa;
+}
+
+/* Error states */
+.lf-error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.lf-error-feedback {
+  color: #b91c1c;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Status badge */
+.lf-status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.lf-status-badge[data-status="found"] {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.lf-status-badge[data-status="pending"] {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.lf-status-badge[data-status="claimed"] {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}

@@ -1,0 +1,29 @@
+.app {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+/* Mobile improvements for app */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better touch targets */
+  button, .btn, input, select, textarea {
+    min-height: 44px; /* iOS recommended touch target size */
+  }
+}
+  

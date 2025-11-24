@@ -1,0 +1,114 @@
+.app {
+  display: flex;
+  font-family: 'Arial', sans-serif;
+  background: var(--bg-primary);
+  min-height: 100vh;
+  flex-direction: column; /* Default to column layout on smaller screens */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Medium screens (tablets and up) */
+@media (min-width: 768px) {
+  .app {
+    flex-direction: row; /* Switch to row layout for wider screens */
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+}
+
+/* Large screens (laptops and up) */
+@media (min-width: 1024px) {
+  .app {
+    flex-direction: row; /* Keep row layout for larger screens */
+  }
+
+  .main-content {
+    padding: 40px;
+  }
+}
+
+
+
+
+
+/* Alert Messages */
+.alert-message {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-message.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.alert-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Table Improvements */
+.table-header {
+  margin-bottom: 15px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.found-button, .view-button, .confirm-button, .cancel-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.found-button {
+  background: #4caf50;
+  color: white;
+  border: none;
+}
+
+.view-button {
+  background: #2196f3;
+  color: white;
+  border: none;
+}
+
+.confirm-button {
+  background: #f44336;
+  color: white;
+  border: none;
+}
+
+.cancel-button {
+  background: #e0e0e0;
+  border: none;
+}
