@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { cacheService, CacheInvalidation } from '../cache/cacheService';
 
-const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:8002/api/`
-// const API_BASE_URL = `http://127.0.0.1:8000/api/`;
+// const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:8002/api/`
+const API_BASE_URL = `https://partner-folk-nashville-together.trycloudflare.com/api/`;
 
 // Axios instance
 const api = axios.create({
