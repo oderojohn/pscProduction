@@ -628,7 +628,7 @@ const PackageModals = ({
                 <div className="form-group">
                   <label>Your Phone/Member NO</label>
                   <input
-                    type="tel"
+                    type="text"
                     placeholder="e.g., 0712345678 or K1234"
                     value={newDroppedPackage.dropperPhone}
                     onChange={(e) => handleInputChange(e, 'dropperPhone', 'drop')}
