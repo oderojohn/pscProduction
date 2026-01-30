@@ -2,7 +2,7 @@ import axios from 'axios';
 import { cacheService, CacheInvalidation } from '../cache/cacheService';
 
 // const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:8002/api/`
-const API_BASE_URL = `https://postings-consciousness-piano-possess.trycloudflare.com/api/`;
+const API_BASE_URL = `https://mainland-graduated-interval-candle.trycloudflare.com/api/`;
 
 // Axios instance
 const api = axios.create({
